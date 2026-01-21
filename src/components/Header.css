@@ -1,0 +1,67 @@
+/* Ensures all padding and margins start from zero */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;                /* Aligns main sections horizontally */
+    justify-content: space-between; /* Pushes content to edges */
+    align-items: center;          /* Centers all content vertically on one line */
+}
+
+.main-header {
+    background-color: #000;       /* Neutralny, ciemny kolor */
+    border-bottom: 1px solid #333;
+    position: fixed;              /* Przykleja do góry ekranu */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;                /* Ensures the header is above other content */
+}
+
+/* 1. Site Branding (Image and Text Wrapper) */
+.site-branding {
+    display: flex;       /* Puts image and text in a row */
+    align-items: center; /* Centers them vertically */
+    gap: 10px;           /* Adds a little space between the image and the text */
+}
+
+.site-logo {
+    height: 30px;        /* Makes the image a reasonable size */
+    width: auto;
+}
+
+.site-name {
+    font-weight: bold;
+    color: #fff; /* White text for visibility */
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+/* 2. Main Navigation Styling */
+.main-nav ul {
+    display: flex;
+    list-style: none; /* Removes bullet points */
+    gap: 30px;        /* Spacing between the links */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #fff; /* White text for visibility */
+    font-size: 14px;
+    padding: 10px 0; 
+}
+
+/* 3. Utility Navigation Styling */
+.utility-nav {
+    color: #fff; 
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
