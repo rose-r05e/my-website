@@ -1,9 +1,12 @@
 import './Header.css';
+import { useLanguage } from '../hooks/useLanguage';
 import siteLogo from '../assets/logo.avif';
 import ThemeToggle from './ThemeToggle';
 import LanguageSelector from './LanguageSelector';
 
 function Header() {
+  const { t } = useLanguage();
+
   return (
     <header className="main-header">
       <div className="container">
@@ -17,11 +20,11 @@ function Header() {
         {/* Center: Main Navigation Links */}
         <nav className="main-nav">
           <ul>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Capabilities</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">{t.nav.projects}</a></li>
+            <li><a href="#">{t.nav.capabilities}</a></li>
+            <li><a href="#">{t.nav.about}</a></li>
+            <li><a href="#">{t.nav.resume}</a></li>
+            <li><a href="#">{t.nav.contact}</a></li>
           </ul>
         </nav>
 

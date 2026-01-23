@@ -15,8 +15,8 @@
 }
 
 .main-header {
-    background-color: #000;       /* Neutralny, ciemny kolor */
-    border-bottom: 1px solid #333;
+    background-color: var(--header-bg);
+        border-bottom: 1px solid var(--header-border);
     position: fixed;              /* Przykleja do góry ekranu */
     top: 0;
     left: 0;
@@ -38,7 +38,7 @@
 
 .site-name {
     font-weight: bold;
-    color: #fff; /* White text for visibility */
+    color: var(--text-primary);
     font-size: 14px;
     text-transform: uppercase;
 }
@@ -53,15 +53,16 @@
 
 .main-nav a {
     text-decoration: none;
-    color: #fff; /* White text for visibility */
+    color: var(--text-primary);
     font-size: 14px;
     padding: 10px 0; 
 }
 
 /* 3. Utility Navigation Styling */
 .utility-nav {
-    color: #fff; 
+    color: var(--text-primary);
     font-size: 14px;
     display: flex;
     align-items: center;
+    gap: 15px;
 }

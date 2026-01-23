@@ -1,0 +1,25 @@
+.theme-toggle-btn {
+    background: transparent;
+    border: 2px solid var(--text-primary);
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle-btn:hover {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    border-color: var(--text-primary);
+}
+
+.theme-toggle-btn:active {
+    opacity: 0.8;
+}
