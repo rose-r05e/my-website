@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+public/resumes/rg_resume_eng.pdf
+public/resumes/rg_resume_pl.pdf
+public/resumes/rg_resume_fr.pdf

@@ -1,0 +1,95 @@
+.resume-page {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-title {
+  text-align: center;
+  margin: 3rem 0 3rem 0;
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+.resume-container {
+  display: block;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.resume-viewer {
+  width: fit-content;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background-color: var(--button-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: sticky;
+  align-self: flex-end;
+  bottom: 2rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.download-button:hover {
+  border-color: var(--button-hover-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pdf-document {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.pdf-document .react-pdf__Page {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.pdf-document .react-pdf__Page canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .resume-page {
+    padding: 1rem;
+  }
+
+  .resume-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .resume-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-button {
+    position: static;
+    margin-top: 1rem;
+  }
+}

@@ -1,4 +1,5 @@
 import './Header.css';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../hooks/useLanguage';
 import siteLogo from '../assets/logo.avif';
 import ThemeToggle from './ThemeToggle';
@@ -12,19 +13,19 @@ function Header() {
       <div className="container">
 
         {/* Left side: Picture AND Name in one container */}
-        <div className="site-branding">
+        <Link to="/" className="site-branding">
           <img src={siteLogo} alt="PIC" className="site-logo" />
           <div className="site-name">Rosy dev</div>
-        </div>
+        </Link>
 
         {/* Center: Main Navigation Links */}
         <nav className="main-nav">
           <ul>
-            <li><a href="#">{t.nav.projects}</a></li>
-            <li><a href="#">{t.nav.capabilities}</a></li>
-            <li><a href="#">{t.nav.about}</a></li>
-            <li><a href="#">{t.nav.resume}</a></li>
-            <li><a href="#">{t.nav.contact}</a></li>
+            <li><Link to="/">{t.nav.projects}</Link></li>
+            <li><Link to="/">{t.nav.capabilities}</Link></li>
+            <li><Link to="/">{t.nav.about}</Link></li>
+            <li><Link to="/resume">{t.nav.resume}</Link></li>
+            <li><Link to="/">{t.nav.contact}</Link></li>
           </ul>
         </nav>
 
