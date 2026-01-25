@@ -1,0 +1,55 @@
+.about-me-page {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about-me-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.about-me-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.about-me-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.about-me-content p {
+  margin-bottom: 1.5rem;
+}
+
+.placeholder-text {
+  color: var(--text-tertiary);
+  font-style: italic;
+  text-align: center;
+  padding: 3rem 1rem;
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-me-container {
+    padding: 1rem;
+  }
+
+  .about-me-title {
+    font-size: 2rem;
+  }
+
+  .about-me-content {
+    font-size: 1rem;
+  }
+}

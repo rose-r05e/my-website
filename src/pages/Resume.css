@@ -25,6 +25,11 @@
   width: fit-content;
   margin: 0 auto;
   background-color: transparent;
+  user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
 }
 
 .download-button {
@@ -65,11 +70,18 @@
 .pdf-document .react-pdf__Page {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   background: white;
+  user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .pdf-document .react-pdf__Page canvas {
   max-width: 100%;
   height: auto !important;
+  user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
 }
 
 /* Responsive design */

@@ -49,7 +49,7 @@ function Resume() {
               <Page
                 key={`page_${index + 1}`}
                 pageNumber={index + 1}
-                renderTextLayer={true}
+                renderTextLayer={false}
                 renderAnnotationLayer={false}
                 width={Math.min(window.innerWidth * 0.6, 700)}
               />

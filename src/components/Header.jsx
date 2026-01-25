@@ -23,9 +23,9 @@ function Header() {
           <ul>
             <li><Link to="/">{t.nav.projects}</Link></li>
             <li><Link to="/">{t.nav.capabilities}</Link></li>
-            <li><Link to="/">{t.nav.about}</Link></li>
+            <li><Link to="/about">{t.nav.about}</Link></li>
             <li><Link to="/resume">{t.nav.resume}</Link></li>
-            <li><Link to="/">{t.nav.contact}</Link></li>
+            <li><Link to="/contact">{t.nav.contact}</Link></li>
           </ul>
         </nav>
 
