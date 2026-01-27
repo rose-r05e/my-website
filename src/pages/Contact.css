@@ -77,12 +77,6 @@
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.95rem;
-  transition: color 0.2s ease;
-}
-
-.contact-details a:hover {
-  color: var(--button-hover-color);
-  text-decoration: underline;
 }
 
 .contact-note {

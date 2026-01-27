@@ -10,19 +10,21 @@
     font-size: 14px;
     padding: 8px 16px;
         border-radius: 20px;
-        transition: all 0.25s;
     }
-    
-    .lang-select-btn:hover {
-        color: var(--link-color);
-        background: var(--border-color);
+
+.lang-arrow {
+    transition: color 0.25s;
+}
+
+.lang-select-btn:hover .lang-arrow {
+    color: var(--link-color);
 }
 
 .lang-dropdown {
-    position: absolute;   
-    right: 0;             
+    position: absolute;
+    left: center;
     top: 100%;
-    width: 110%;
+    width: max-content;
         background-color: var(--dropdown-bg);
         color: var(--text-primary);
     list-style: none;

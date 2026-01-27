@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useLanguage } from '../hooks/useLanguage'
-import reactLogo from '../assets/react.svg'
+import reactLogo from '../assets/logos/react.svg'
 import viteLogo from '/vite.svg'
 import '../App.css'
 

@@ -30,7 +30,7 @@ export default function ThemeToggle() {
     const moonEmoji = '\uD83C\uDF19';
 
     return (
-        <button className="theme-toggle-btn" onClick={handleToggle}
+        <button className="theme-toggle-btn " onClick={handleToggle}
             title={isDark ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
             aria-label={isDark ? 'Switch to Dark Mode' : 'Switch to Light Mode'}>
             {isDark ? sunEmoji : moonEmoji}

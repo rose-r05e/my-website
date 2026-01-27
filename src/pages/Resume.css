@@ -39,24 +39,17 @@
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--text-primary);
-  background-color: var(--button-bg);
-  border: 2px solid var(--border-color);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
   white-space: nowrap;
   position: sticky;
   align-self: flex-end;
   bottom: 2rem;
   margin-left: 2rem;
   margin-top: 2rem;
+  /* Inherits uncolored button styles from button in index.css */
 }
 
 .download-button:hover {
-  border-color: var(--button-hover-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: var(--button-hover-color);
 }
 
 .pdf-document {
@@ -69,7 +62,7 @@
 
 .pdf-document .react-pdf__Page {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  background: white;
+  background: var(--bg-primary);
   user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;

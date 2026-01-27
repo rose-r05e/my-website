@@ -22,7 +22,7 @@ function LanguageSelector() {
   return (
     <div className="lang-container">
       <button onClick={toggleLanguageDropdown} className="lang-select-btn">
-        {languages[language].flag} {languages[language].name} ▼
+        {languages[language].flag} {languages[language].name} <span className="lang-arrow">▼</span>
       </button>
       {isLangOpen && (
         <ul className="lang-dropdown">

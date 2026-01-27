@@ -50,19 +50,8 @@
   padding: 0.875rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--text-primary);
-  background-color: var(--button-bg);
-  border: 2px solid var(--border-color);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
   align-self: flex-start;
-}
-
-.submit-button:hover {
-  border-color: var(--button-hover-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  /* Inherits uncolored button styles from button in index.css */
 }
 
 /* Responsive design */
