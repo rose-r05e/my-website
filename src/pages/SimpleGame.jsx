@@ -56,7 +56,7 @@ export default function ProjectsPage() {
           HTML, and CSS. It uses my <strong>cartesian2d-js</strong> framework.<br/>
           You pilot a ship (the triangle) dodging asteroids and shooting as you go,
           trying to survive as long as possible.<br />
-          Controls use WSAD for movement and SPACE to shoot.
+          Controls use ◀▲▼▶ for movement and SPACE to shoot.
         </p>
 
         <a

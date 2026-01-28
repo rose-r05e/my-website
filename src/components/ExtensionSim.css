@@ -2,7 +2,7 @@
 
 /* Theme-responsive tile container */
 .theme-tile {
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 2rem;
