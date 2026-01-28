@@ -1,6 +1,6 @@
 import { useLanguage } from '../hooks/useLanguage';
 import ContactForm from '../components/ContactForm';
-import ContactInfo from '../utils/ContactInfo';
+import ContactInfo from '../utils/contactInfo';
 import './Contact.css';
 
 function Contact() {

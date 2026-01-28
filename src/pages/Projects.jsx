@@ -13,6 +13,11 @@ export default function Projects() {
       title: "Stardust GroundStation",
       description: "Ground control and telemetry software for the Stardust stratospheric experiment, developed for the BEXUS programme.",
     },
+    {
+      id: "woocommerce-extension",
+      title: "Personalized Product Designer",
+      description: "WooCommerce extension that allows customers to design custom products with text and images using Fabric.js canvas.",
+    },
   ];
 
   return (

@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import SimpleGame from './pages/SimpleGame';
 import Stardust from './pages/Stardust';
+import WoocommerceExtension from './pages/WoocommerceExtension';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/simplegame" element={<SimpleGame />} />
           <Route path="/projects/stardust" element={<Stardust />} />
+          <Route path="/projects/woocommerce-extension" element={<WoocommerceExtension />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/contact" element={<Contact />} />

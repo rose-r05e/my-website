@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '../hooks/useLanguage';
-import ContactInfo from '../utils/ContactInfo';
+import ContactInfo from '../utils/contactInfo';
 import './ContactForm.css';
 
 function ContactForm() {
