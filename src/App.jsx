@@ -11,6 +11,7 @@ import Projects from './pages/Projects';
 import SimpleGame from './pages/SimpleGame';
 import Stardust from './pages/Stardust';
 import WoocommerceExtension from './pages/WoocommerceExtension';
+import ANPRSystem from './pages/ANPRSystem';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/projects/simplegame" element={<SimpleGame />} />
           <Route path="/projects/stardust" element={<Stardust />} />
           <Route path="/projects/woocommerce-extension" element={<WoocommerceExtension />} />
+          <Route path="/projects/anpr-system" element={<ANPRSystem />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/contact" element={<Contact />} />

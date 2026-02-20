@@ -18,18 +18,24 @@ export default function Projects() {
       title: "Personalized Product Designer",
       description: "WooCommerce extension that allows customers to design custom products with text and images using Fabric.js canvas.",
     },
+    {
+      id: "anpr-system",
+      title: "ANPR System",
+      description: "Automatic Number Plate Recognition system for vehicle license plate detection and OCR reading with performance analysis.",
+    },
   ];
 
   return (
-    <div className="projects-container">
-      <h1 className="projects-title">My Projects</h1>
-
-      <div className="projects-grid">
+    <div className="page">
+        <header className="page-header">
+          <h1>My Projects</h1>
+        </header>
+        <div className="projects-grid">
         {projects.map((project) => (
           <Link
             key={project.id}
             to={`/projects/${project.id}`}
-            className="project-card"
+            className="card project-card"
           >
             <h2>{project.title}</h2>
             <p>{project.description}</p>

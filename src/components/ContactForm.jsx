@@ -64,9 +64,9 @@ function ContactForm() {
   };
 
   return (
-    <div className="contact-form-section">
-      <h2>{t.contact.formTitle}</h2>
-      <form onSubmit={handleSubmit} className="contact-form">
+      <div className="section contact-form-section">
+        <h2 className="card-header">{t.contact.formTitle}</h2>
+        <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-group">
           <label htmlFor="name">{t.contact.nameLabel}</label>
           <input
@@ -119,7 +119,7 @@ function ContactForm() {
           ></textarea>
         </div>
 
-        <button type="submit" className="submit-button" disabled={isSubmitting}>
+        <button type="submit" className="submit-button btn-colored" disabled={isSubmitting}>
           {isSubmitting ? '...' : t.contact.submitButton}
         </button>
 
@@ -129,8 +129,8 @@ function ContactForm() {
         {submitStatus === 'error' && (
           <div className="form-message error">{t.contact.errorMessage || 'An error occurred.'}</div>
         )}
-      </form>
-    </div>
+        </form>
+      </div>
   );
 }
 

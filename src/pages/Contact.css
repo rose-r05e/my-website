@@ -1,38 +1,10 @@
-.contact-page {
-  min-height: 100vh;
-  padding: 2rem 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.contact-container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.contact-title {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: var(--text-primary);
-  text-align: center;
-}
-
 .contact-content {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 3rem;
   align-items: start;
 }
 
-/* Contact Info Section */
-.contact-info-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: var(--text-primary);
-}
 
 .contact-info {
   display: flex;
@@ -47,7 +19,6 @@
 }
 
 .contact-icon {
-  font-size: 2rem;
   min-width: 40px;
   display: flex;
   align-items: center;
@@ -95,16 +66,5 @@
   .contact-content {
     grid-template-columns: 1fr;
     gap: 3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-container {
-    padding: 1rem;
-  }
-
-  .contact-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
   }
 }

@@ -5,9 +5,11 @@ function AboutMe() {
   const { t, language } = useLanguage();
 
   return (
-    <div className="about-me-page">
+    <div className="page about-me-page">
       <div className="about-me-container">
-        <h1 className="about-me-title">{t.aboutMe.title}</h1>
+        <header className="page-header">
+          <h1>{t.aboutMe.title}</h1>
+        </header>
         
         <div className="about-me-content">
           {/* English content */}

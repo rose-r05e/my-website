@@ -1,14 +1,14 @@
 .lang-container {
-    position: relative; 
+    position: relative;
 }
 
 .lang-select-btn {
     background: var(--dropdown-bg);
         border: 1px solid var(--border-color);
         color: var(--text-primary);
-    cursor: pointer;
-    font-size: 14px;
-    padding: 8px 16px;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 8px 16px;
         border-radius: 20px;
     }
 
@@ -22,37 +22,38 @@
 
 .lang-dropdown {
     position: absolute;
-    left: center;
-    top: 100%;
-    width: max-content;
+        left: center;
+        top: 100%;
+        width: max-content;
         background-color: var(--dropdown-bg);
         color: var(--text-primary);
-    list-style: none;
-    border-radius: 4px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    margin-top: 5px;
+        list-style: none;
+        border-radius: 4px;
+        border: 1px solid var(--border-color);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        margin-top: 5px;
 }
 
 .lang-dropdown li {
     padding: 5px 0;
-    cursor: pointer;
+        cursor: pointer;
 }
 
 .lang-dropdown li:hover {
     text-decoration: underline;
 }
+
 .lang-option {
     background: none;
-    border: none;
-    color: var(--text-primary);
-    cursor: pointer;
-    font-size: 14px;
-    padding: 5px 10px;
-    width: 100%;
-    text-align: left;
-    transition: color 0.25s;
+        border: none;
+        color: var(--text-primary);
+        cursor: pointer;
+        font-size: 14px;
+        padding: 5px 10px;
+        width: 100%;
+        text-align: left;
+        transition: color 0.25s;
 }
 
 .lang-option:hover {

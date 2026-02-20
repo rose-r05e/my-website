@@ -35,8 +35,10 @@ function Resume() {
   }
 
   return (
-    <div className="resume-page">
-      <h1 className="resume-title">{t.resume.title}</h1>
+    <div className="page resume-page">
+      <header className="page-header">
+        <h1>{t.resume.title}</h1>
+      </header>
       
       <div className="resume-container">
         <div className="resume-viewer">

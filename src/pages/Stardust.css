@@ -1,100 +1,17 @@
-.projects-page {
-  min-height: 100vh;
-  padding: 3rem 1rem;
-  background: var(--bg-primary);
-}
-
-.projects-container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-/* Header Section */
-.project-header {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.project-header h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-}
-
-.project-subtitle {
-  font-size: 1.2rem;
-  color: var(--text-secondary);
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* Card Styles */
-.project-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
-
-.card-header h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 0;
-}
-
-.icon {
-  font-size: 1.5rem;
-  display: inline-block;
-}
-
-/* Overview Card */
-.overview-card p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--text-secondary);
-  margin-bottom: 1rem;
-}
-
-.overview-card p:last-child {
-  margin-bottom: 0;
-}
-
 /* Screenshots Card */
-.screenshots-card h2 {
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.screenshots-grid {
+.picture-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 2.5rem;
-  margin: -0.5rem -0.5rem -2rem -0.5rem;
 }
 
-.screenshot-item {
+.picture-item {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.screenshot-image {
+.picture-image {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -103,7 +20,7 @@
   background: var(--bg-primary);
 }
 
-.screenshot-caption {
+.picture-caption {
   font-size: 0.95rem;
   color: var(--text-secondary);
   font-style: italic;
@@ -111,34 +28,25 @@
 }
 
 /* Features Grid */
-.features-grid {
+.projects-page .features-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
-.feature-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.feature-card .icon {
-  font-size: 2rem;
-}
-
-.feature-card h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--text-primary);
+.projects-page .features-grid .section {
+  max-width: none;
   margin: 0;
+  padding: 2rem;
 }
 
-.feature-card p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--text-secondary);
-  margin: 0;
+@media (max-width: 768px) {
+  .projects-page .features-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Project Links */
@@ -151,7 +59,6 @@
 }
 
 .project-button {
-  padding: 0.875rem 1.75rem;
   border-radius: 0.75rem;
   font-size: 1rem;
   font-weight: 500;
@@ -162,7 +69,7 @@
 }
 
 .project-button.primary {
-  /* Inherits from .btn-colored in index.css */
+  /* Uses .btn-colored from global.css */
 }
 
 .project-button.secondary {
@@ -175,44 +82,4 @@
 
 .project-button.secondary:hover {
   border-color: var(--button-hover-color);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .projects-page {
-    padding: 2rem 1rem;
-  }
-
-  .projects-container {
-    gap: 2rem;
-  }
-
-  .project-header h1 {
-    font-size: 2rem;
-  }
-
-  .project-subtitle {
-    font-size: 1rem;
-  }
-
-  .project-card {
-    padding: 1.5rem;
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .tech-list {
-    grid-template-columns: 1fr;
-  }
-
-  .project-links {
-    flex-direction: column;
-  }
-
-  .project-button {
-    width: 100%;
-    justify-content: center;
-  }
 }

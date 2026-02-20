@@ -11,18 +11,18 @@ export default function ProjectsPage() {
     }
   };
   return (
-    <div className="projects-page">
+    <div className="page projects-page">
       <div className="projects-container">
-        <header className="projects-header">
+        <header className="page-header">
           <h1>Having fun with JavaScript</h1>
-          <p className="subtitle">Here are a couple projects I've published on GitHub.</p>
+          <p>Here are a couple projects I've published on GitHub.</p>
         </header>
 
         {/* ───────────────────────────────────────────────────────── */}
         {/* Project 1 — cartesian2d-js */}
-        <section className="project-card">
-          <div className="project-icon">📐</div>
-          <h2>cartesian2d-js</h2>
+        <div className="section">
+          <div className="project-icon icon">📐</div>
+          <h2 className="section-header">cartesian2d-js</h2>
         <p>
           <strong>cartesian2d-js</strong> is a lightweight JavaScript utility
           library for working with Cartesian (2D) coordinate systems, vectors,
@@ -44,13 +44,13 @@ export default function ProjectsPage() {
         >
           🔗 View the cartesian2d-js repository on GitHub
         </a>
-        </section>
+        </div>
 
         {/* ───────────────────────────────────────────────────────── */}
         {/* Project 2 — Evasive Maneuvers */}
-        <section className="project-card">
-          <div className="project-icon">🚀</div>
-          <h2>Evasive Maneuvers</h2>
+        <div className="section">
+          <div className="project-icon icon">🚀</div>
+          <h2 className="section-header">Evasive Maneuvers</h2>
         <p>
           <strong>Evasive Maneuvers</strong> is a simple browser game built in JavaScript,
           HTML, and CSS. It uses my <strong>cartesian2d-js</strong> framework.<br/>
@@ -83,7 +83,7 @@ export default function ProjectsPage() {
             🔄 Restart the game
           </button>
         </div>
-        </section>
+        </div>
       </div>
     </div>
   );

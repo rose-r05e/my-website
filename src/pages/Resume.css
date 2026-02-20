@@ -1,17 +1,9 @@
 .resume-page {
   width: 100%;
   margin: 0 auto;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.resume-title {
-  text-align: center;
-  margin: 3rem 0 3rem 0;
-  font-size: 2rem;
-  color: var(--text-primary);
 }
 
 .resume-container {
@@ -36,7 +28,6 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
   white-space: nowrap;
@@ -45,7 +36,7 @@
   bottom: 2rem;
   margin-left: 2rem;
   margin-top: 2rem;
-  /* Inherits uncolored button styles from button in index.css */
+  /* Inherits uncolored button styles from button in global.css */
 }
 
 .download-button:hover {
@@ -79,15 +70,6 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .resume-page {
-    padding: 1rem;
-  }
-
-  .resume-title {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
   .resume-container {
     flex-direction: column;
     align-items: center;
