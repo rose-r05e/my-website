@@ -141,28 +141,6 @@
   margin: 0;
 }
 
-/* Tech Stack Card */
-.tech-stack-card h2 {
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 1.5rem;
-}
-
-.tech-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 0.75rem;
-  list-style: disc;
-  padding-left: 1.5rem;
-  color: var(--text-secondary);
-  font-size: 1.05rem;
-}
-
-.tech-list li {
-  line-height: 1.6;
-}
-
 /* Project Links */
 .project-links {
   display: flex;
