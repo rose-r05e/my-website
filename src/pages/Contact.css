@@ -18,7 +18,7 @@
   align-items: flex-start;
 }
 
-.contact-icon {
+.contact-item .icon {
   min-width: 40px;
   display: flex;
   align-items: center;
@@ -26,7 +26,7 @@
   color: var(--text-primary);
 }
 
-.contact-icon svg {
+.contact-item .icon svg {
   width: 28px;
   height: 28px;
 }

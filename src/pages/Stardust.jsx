@@ -4,7 +4,7 @@ import groundstation from '../assets/pictures/groundstation.gif';
 
 export default function Projects() {
   return (
-    <div className="page projects-page">
+    <div className="page stardust-page">
       <div className="stardust-section">
 
         {/* Header */}
@@ -34,7 +34,7 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* Screenshots */}
+        {/* Pictures */}
         <div className="section picture-section">
           <div className="picture-grid">
             <div className="picture-item">
@@ -64,7 +64,7 @@ export default function Projects() {
         <div className="features-grid">
           <div className="section">
             <span className="icon">📡</span>
-            <h3 className="section-header">Real-Time Telemetry</h3>
+            <h2 className="section-header">Real-Time Telemetry</h2>
             <p>
               Live UDP data stream visualized in a PyQt-based dashboard, displaying experiment state and sensor readings.
             </p>
@@ -72,7 +72,7 @@ export default function Projects() {
 
           <div className="section">
             <span className="icon">💻</span>
-            <h3 className="section-header">Telecommands</h3>
+            <h2 className="section-header">Telecommands</h2>
             <p>
               Operators could send validated commands from the UI to the balloon payload, enabling safe in-flight interaction.
             </p>
@@ -80,7 +80,7 @@ export default function Projects() {
 
           <div className="section">
             <span className="icon">📥</span>
-            <h3 className="section-header">Data Downstream</h3>
+            <h2 className="section-header">Data Downstream</h2>
             <p>
               UDP downstream from the C++ app running in the gondola, feeding the ground station in real time.
             </p>
@@ -93,10 +93,10 @@ export default function Projects() {
           <a href="https://github.com/rose-r05e/BEXUS-Groundstation" target="_blank" rel="noreferrer" className="project-button primary btn-colored">
             🔗 GitHub Repository
           </a>
-          <a href="https://simle.pl/stardust" target="_blank" rel="noreferrer" className="project-button secondary">
+          <a href="https://simle.pl/stardust" target="_blank" rel="noreferrer" className="project-button button secondary">
             Stardust Project Page
           </a>
-          <a href="https://rexusbexus.net/bexus/" target="_blank" rel="noreferrer" className="project-button secondary">
+          <a href="https://rexusbexus.net/bexus/" target="_blank" rel="noreferrer" className="project-button button secondary">
             BEXUS Project Page
           </a>
         </div>

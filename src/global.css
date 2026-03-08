@@ -4,8 +4,9 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  --bg-primary: #ffffff;
-    --bg-secondary: #f9f9f9;
+  --page-bg: #ffffff;
+    --bg-primary: #f9f9f9;
+    --bg-secondary: #ffffff;
     --bg-tertiary: #f0f0f0;
     --text-primary: #213547;
     --text-secondary: #888;
@@ -15,6 +16,7 @@
     --button-hover-color: #ff74c8;
     --link-color: #ff64b8;
     --header-bg: #f5f5f5;
+    --footer-bg: #f5f5f5;
     --header-border: #e0e0e0;
     --dropdown-bg: #ffffff;
     --accent-color: #f042a4;
@@ -22,7 +24,7 @@
     --emoji-icon-size: 2rem;
   
     color: var(--text-primary);
-    background-color: var(--bg-primary);
+    background-color: var(--page-bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -41,8 +43,9 @@
 }
 /* Dark theme */
 :root.dark-theme {
-  --bg-primary: #242424;
-  --bg-secondary: #1a1a1a;
+  --page-bg: #242424;
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #242424;
   --bg-tertiary: #2a2a2a;
   --text-primary: rgba(255, 255, 255, 0.87);
   --text-secondary: #888;
@@ -52,6 +55,7 @@
   --button-hover-color: #ff74c8;
   --link-color: #ff64b8;
   --header-bg: #000;
+  --footer-bg: #000;
   --header-border: #333;
   --dropdown-bg: #333;
   --accent-color: #f042a4;
@@ -145,14 +149,13 @@ button:focus-visible {
 .page {
   min-height: 100vh;
   padding: 3rem 1.5rem;
-  background: var(--bg-primary);
 }
 
 .section {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: 1rem;
   padding: 2rem;

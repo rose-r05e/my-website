@@ -28,23 +28,34 @@
 }
 
 /* Features Grid */
-.projects-page .features-grid {
+.stardust-page .features-grid {
   width: 100%;
   max-width: 1200px;
   margin: 3rem auto 3rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  align-items: stretch;
 }
 
-.projects-page .features-grid .section {
-  max-width: none;
-  margin: 0;
-  padding: 2rem;
+.stardust-page .features-grid .section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stardust-page .features-grid .section+.section {
+  margin-top: 0;
 }
 
 @media (max-width: 768px) {
-  .projects-page .features-grid {
+  .picture-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .stardust-page .features-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -66,10 +77,6 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-.project-button.primary {
-  /* Uses .btn-colored from global.css */
 }
 
 .project-button.secondary {

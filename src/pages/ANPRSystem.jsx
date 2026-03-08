@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import './ANPRSystem.css';
-import beforeDetection from '../assets/pictures/before_detection.png';
-import afterDetection from '../assets/pictures/after_detection.png';
+import beforeDetection1 from '../assets/pictures/before_detection1.png';
+import afterDetection1 from '../assets/pictures/after_detection1.png';
 
 const RecognitionPage = () => {
   // Dane przeniesione do stanu, aby łatwiej było nimi zarządzać
   const [results] = useState([
     {
       id: 1,
-      inputImg: beforeDetection, 
-      outputImg: afterDetection,
+      inputImg: beforeDetection1, 
+      outputImg: afterDetection1,
       expected: "GX123XD",
       read: "GX123XD",
       contours: 113,
@@ -20,8 +20,8 @@ const RecognitionPage = () => {
     },
     {
       id: 2,
-      inputImg: beforeDetection,
-      outputImg: afterDetection,
+      inputImg: beforeDetection1,
+      outputImg: afterDetection1,
       expected: "KR9L2P4",
       read: "KR9L2P8",
       contours: 97,
@@ -78,10 +78,10 @@ const RecognitionPage = () => {
   };
 
   return (
-    <div className="page projects-page">
+    <div className="page anpr-system-page">
       <div className="projects-container">
         <header className="page-header">
-          <h1>Automatyczny System Rozpoznawania Tablic Rejestracyjnych</h1>
+          <h1>Automatyczny System Rozpoznawania<br/>Tablic Rejestracyjnych</h1>
           <p>Projekt wykorzystujący przetwarzanie obrazu i OCR do identyfikacji tablic rejestracyjnych</p>
         </header>
 
@@ -89,37 +89,37 @@ const RecognitionPage = () => {
         <div className="section">
           <h2 className="section-header">Prezentacja Projektu</h2>
           <div className="hero-image">
-            <img src={afterDetection} alt="System rozpoznawania tablic rejestracyjnych" />
+            <img src={afterDetection1} alt="System rozpoznawania tablic rejestracyjnych" />
           </div>
         </div>
 
         {/* Tech Stack Section */}
-        <div className="section">
+        <div className="section technologies-section">
           <h2 className="section-header">Technologie</h2>
           <div className="tech-grid">
             <div className="card tech-tile">
-              <div className="tech-tile-icon icon">☕</div>
-              <h3>Java</h3>
+              <div className="icon">☕</div>
+              <h3 className="card-header">Java</h3>
               <p>Główny język programowania projektu. Java zapewnia solidne podstawy dla przetwarzania obrazów oraz integracji z bibliotekami OpenCV.</p>
             </div>
             <div className="card tech-tile">
-              <div className="tech-tile-icon icon">🏗️</div>
-              <h3>Gradle</h3>
+              <div className="icon">🏗️</div>
+              <h3 className="card-header">Gradle</h3>
               <p>System automatyzacji budowania projektu. Gradle zarządza zależnościami i procesem kompilacji, upraszczając zarządzanie projektem.</p>
             </div>
             <div className="card tech-tile">
-              <div className="tech-tile-icon icon">👁️</div>
-              <h3>OpenCV</h3>
+              <div className="icon">👁️</div>
+              <h3 className="card-header">OpenCV</h3>
               <p>Biblioteka do przetwarzania obrazów. OpenCV umożliwia wykrywanie konturów, segmentację i przygotowanie obrazu do rozpoznawania tekstu.</p>
             </div>
             <div className="card tech-tile">
-              <div className="tech-tile-icon icon">📝</div>
-              <h3>Tesseract OCR</h3>
+              <div className="icon">📝</div>
+              <h3 className="card-header">Tesseract OCR</h3>
               <p>Silnik optycznego rozpoznawania znaków. Tesseract OCR przekształca wykryte fragmenty obrazu w tekst, identyfikując numer tablicy.</p>
             </div>
             <div className="card tech-tile">
-              <div className="tech-tile-icon icon">✅</div>
-              <h3>JUnit</h3>
+              <div className="icon">✅</div>
+              <h3 className="card-header">JUnit</h3>
               <p>Framework do testowania jednostkowego. JUnit zapewnia, że wszystkie komponenty systemu działają poprawnie i niezawodnie.</p>
             </div>
           </div>

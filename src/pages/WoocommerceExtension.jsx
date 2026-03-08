@@ -23,49 +23,49 @@ function WoocommerceExtension() {
         <div className="features-grid">
           <div className="card feature-card">
             <div className="icon">🎨</div>
-            <h3 className="wc-card-header">Visual Canvas Designer</h3>
+            <h3 className="card-header">Visual Canvas Designer</h3>
             <p>Powered by Fabric.js for smooth, professional design experience with drag-and-drop functionality.</p>
           </div>
           
           <div className="card feature-card">
             <div className="icon">📐</div>
-            <h3 className="wc-card-header">Flexible Canvas Positioning</h3>
+            <h3 className="card-header">Flexible Canvas Positioning</h3>
             <p>Admins can precisely position and size the design canvas on any product image using percentage-based controls.</p>
           </div>
           
           <div className="card feature-card">
             <div className="icon">✏️</div>
-            <h3 className="wc-card-header">Text Customization</h3>
+            <h3 className="card-header">Text Customization</h3>
             <p>Customers can add text with custom colors, sizes, and positioning. Perfect for personalized messages.</p>
           </div>
           
           <div className="card feature-card">
             <div className="icon">🖼️</div>
-            <h3 className="wc-card-header">Image Upload</h3>
+            <h3 className="card-header">Image Upload</h3>
             <p>Allow customers to upload their own images, logos, or photos to incorporate into their designs.</p>
           </div>
           
           <div className="card feature-card">
             <div className="icon">🌈</div>
-            <h3 className="wc-card-header">Product Color Variations</h3>
+            <h3 className="card-header">Product Color Variations</h3>
             <p>Automatically syncs with WooCommerce product variations for accurate color preview.</p>
           </div>
           
           <div className="card feature-card">
             <div className=" icon">💾</div>
-            <h3 className="wc-card-header">Design File Export</h3>
+            <h3 className="card-header">Design File Export</h3>
             <p>Admins can download design files in SVG format and customer-uploaded images for production.</p>
           </div>
           
           <div className="card feature-card">
             <div className="icon">🛒</div>
-            <h3 className="wc-card-header">WooCommerce Integration</h3>
+            <h3 className="card-header">WooCommerce Integration</h3>
             <p>Seamlessly integrates with WooCommerce cart, checkout, and order management systems.</p>
           </div>
           
           <div className="card feature-card">
             <div className="icon">📱</div>
-            <h3 className="wc-card-header">Responsive Design</h3>
+            <h3 className="card-header">Responsive Design</h3>
             <p>Works beautifully on desktop, tablet, and mobile devices for designing on the go.</p>
           </div>
         </div>

@@ -17,28 +17,29 @@
   border-bottom: none;
 }
 
-.extension-description {
+.woocommerce-extension-page .extension-header>p {
+  color: inherit;
+}
+
+.woocommerce-extension-page .extension-header h1 {
+  color: #ffffff;
+}
+
+.woocommerce-extension-page .extension-header .extension-description {
   max-width: 800px;
   margin: 0 auto;
   font-size: 1rem;
+  color: inherit;
   opacity: 0.95;
   line-height: 1.6;
 }
 
 /* Features Section */
-.features-section .section-header {
-  text-align: center;
-}
 
 .woocommerce-extension-page .features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-}
-
-.feature-card {
-  background: var(--bg-primary);
-  border-radius: 8px;
 }
 
 .feature-card p {
@@ -48,19 +49,10 @@
 }
 
 /* Technical Section */
-.technical-section .section-header {
-  text-align: center;
-}
-
 .tech-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-}
-
-.tech-column {
-  background: var(--bg-primary);
-  border-radius: 8px;
 }
 
 .tech-column ul {
@@ -85,9 +77,9 @@
   color: white;
 }
 
-.use-cases-section .section-header {
-  text-align: center;
-  color: white;
+.woocommerce-extension-page .use-cases-section .section-header,
+.woocommerce-extension-page .use-cases-section .use-case .card-header {
+  color: #ffffff;
 }
 
 .use-cases-grid {
@@ -97,14 +89,11 @@
 }
 
 .use-case {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.use-case .card-header {
-  color: white;
+  background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 .use-case p {
@@ -127,11 +116,7 @@
   .woocommerce-extension-page {
     padding: 0;
   }
-  
-  .extension-header h1 {
-    font-size: 2rem;
-  }
-  
+
     .woocommerce-extension-page .features-grid,
   .use-cases-grid {
     grid-template-columns: 1fr;

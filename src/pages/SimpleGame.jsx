@@ -70,7 +70,7 @@ export default function ProjectsPage() {
 
         {/* Embedded playable game */}
         <div className="game-embed-container">
-          <h3>Play the DEMO below 🕹️</h3>
+          <h2>Play the DEMO below 🕹️</h2>
           <div className="iframe-wrapper">
             <iframe
               ref={iframeRef}

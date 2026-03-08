@@ -65,7 +65,7 @@ function ContactForm() {
 
   return (
       <div className="section contact-form-section">
-        <h2 className="card-header">{t.contact.formTitle}</h2>
+        <h2 className="section-header">{t.contact.formTitle}</h2>
         <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-group">
           <label htmlFor="name">{t.contact.nameLabel}</label>
