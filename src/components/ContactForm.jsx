@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '../hooks/useLanguage';
-import ContactInfo from '../utils/contactInfo';
+import { getEmail } from '../utils/contactInfoLoader';
 import './ContactForm.css';
 
 function ContactForm() {
@@ -29,7 +29,7 @@ function ContactForm() {
 
     try {
       // Get recipient email from ContactInfo
-      const recipientEmail = ContactInfo.getEmail();
+      const recipientEmail = getEmail();
 
       // Create mailto link with form data
       const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(

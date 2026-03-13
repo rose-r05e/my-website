@@ -1,8 +1,18 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import "./SimpleGame.css";
 
 export default function ProjectsPage() {
+  const EMOJI = {
+    geometry: '\u{1F4D0}',
+    rocket: '\u{1F680}',
+    link: '\u{1F517}',
+    joystick: '\u{1F579}\uFE0F',
+    restart: '\u{1F504}'
+  };
+
   const iframeRef = useRef(null);
+  const embedRef = useRef(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const handleRestart = () => {
     if (iframeRef.current) {
@@ -10,6 +20,30 @@ export default function ProjectsPage() {
       iframeRef.current.src = iframeRef.current.src;
     }
   };
+
+  const handleToggleFullscreen = async () => {
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+      return;
+    }
+
+    if (embedRef.current) {
+      await embedRef.current.requestFullscreen();
+    }
+  };
+
+  useEffect(() => {
+    const onFullscreenChange = () => {
+      setIsFullscreen(Boolean(document.fullscreenElement));
+    };
+
+    document.addEventListener('fullscreenchange', onFullscreenChange);
+
+    return () => {
+      document.removeEventListener('fullscreenchange', onFullscreenChange);
+    };
+  }, []);
+
   return (
     <div className="page projects-page">
       <div className="projects-container">
@@ -21,7 +55,7 @@ export default function ProjectsPage() {
         {/* ───────────────────────────────────────────────────────── */}
         {/* Project 1 — cartesian2d-js */}
         <div className="section">
-          <div className="project-icon icon">📐</div>
+          <div className="project-icon icon">{EMOJI.geometry}</div>
           <h2 className="section-header">cartesian2d-js</h2>
         <p>
           <strong>cartesian2d-js</strong> is a lightweight JavaScript utility
@@ -42,14 +76,14 @@ export default function ProjectsPage() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          🔗 View the cartesian2d-js repository on GitHub
+          {EMOJI.link} View the cartesian2d-js repository on GitHub
         </a>
         </div>
 
         {/* ───────────────────────────────────────────────────────── */}
         {/* Project 2 — Evasive Maneuvers */}
         <div className="section">
-          <div className="project-icon icon">🚀</div>
+          <div className="project-icon icon">{EMOJI.rocket}</div>
           <h2 className="section-header">Evasive Maneuvers</h2>
         <p>
           <strong>Evasive Maneuvers</strong> is a simple browser game built in JavaScript,
@@ -65,23 +99,33 @@ export default function ProjectsPage() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          🔗 View the evasive-maneuvers repository on GitHub
+          {EMOJI.link} View the evasive-maneuvers repository on GitHub
         </a>
 
         {/* Embedded playable game */}
-        <div className="game-embed-container">
-          <h2>Play the DEMO below 🕹️</h2>
+        <div className="game-embed-container" ref={embedRef}>
+          <h2>Play the DEMO below {EMOJI.joystick}</h2>
           <div className="iframe-wrapper">
             <iframe
               ref={iframeRef}
               title="Evasive Maneuvers"
               src="https://rose-r05e.github.io/evasive-maneuvers/"
               allowFullScreen
+              scrolling="no"
             ></iframe>
           </div>
-          <button className="restart-button btn-colored" onClick={handleRestart}>
-            🔄 Restart the game
-          </button>
+          <div className="game-actions">
+            <button className="restart-button btn-colored" onClick={handleRestart}>
+              {EMOJI.restart} Restart the game
+            </button>
+            <button
+              className="fullscreen-button btn-colored"
+              onClick={handleToggleFullscreen}
+              type="button"
+            >
+              {isFullscreen ? 'Exit fullscreen' : 'Go fullscreen'}
+            </button>
+          </div>
         </div>
         </div>
       </div>

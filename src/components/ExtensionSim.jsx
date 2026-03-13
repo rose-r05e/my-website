@@ -4,6 +4,24 @@ import '../utils/designer.js';
 import './ExtensionSim.css';
 
 function ExtensionSim() {
+  const EMOJI = {
+    adminSetup: '\u{1F6E0}\uFE0F',
+    buyerView: '\u{1F3A8}',
+    adminOrders: '\u{1F4E6}',
+    camera: '\u{1F4F7}',
+    add: '\u2795',
+    save: '\u{1F4BE}',
+    warning: '\u26A0\uFE0F',
+    trash: '\u{1F5D1}\uFE0F',
+    tip: '\u{1F4A1}',
+    calendar: '\u{1F4C5}',
+    customer: '\u{1F464}',
+    download: '\u2B07\uFE0F',
+    file: '\u{1F4C4}',
+    imageFile: '\u{1F5BC}\uFE0F',
+    check: '\u2713'
+  };
+
   // State for different views
   const [currentView, setCurrentView] = useState('admin-setup');
   
@@ -304,19 +322,19 @@ function ExtensionSim() {
           className={currentView === 'admin-setup' ? 'active' : ''}
           onClick={() => setCurrentView('admin-setup')}
         >
-          🛠️ Admin Setup
+          {EMOJI.adminSetup} Admin Setup
         </button>
         <button 
           className={currentView === 'buyer-designer' ? 'active' : ''}
           onClick={() => setCurrentView('buyer-designer')}
         >
-          🎨 Buyer View
+          {EMOJI.buyerView} Buyer View
         </button>
         <button 
           className={currentView === 'admin-orders' ? 'active' : ''}
           onClick={() => setCurrentView('admin-orders')}
         >
-          📦 Admin Orders
+          {EMOJI.adminOrders} Admin Orders
         </button>
       </div>
 
@@ -423,7 +441,7 @@ function ExtensionSim() {
                         }}
                       />
                       <label htmlFor={`variant-img-${variant.id}`} className="variant-img-label">
-                        {variant.image ? '✓ Image' : '📷 Image'}
+                        {variant.image ? `${EMOJI.check} Image` : `${EMOJI.camera} Image`}
                       </label>
                       {variant.image && (
                         <div className="variant-preview">
@@ -458,7 +476,7 @@ function ExtensionSim() {
                     ]);
                   }}
                 >
-                  ➕ Add Variant
+                  {EMOJI.add} Add Variant
                 </button>
               </div>
             </div>
@@ -559,7 +577,7 @@ function ExtensionSim() {
               )}
               
               <button className="btn-primary btn-large" onClick={saveAdminSetup}>
-                💾 Save Product Setup
+                {EMOJI.save} Save Product Setup
               </button>
             </div>
           </div>
@@ -574,7 +592,7 @@ function ExtensionSim() {
           
           {!productImage ? (
             <div className="no-setup-warning">
-              <h3>⚠️ No Product Setup</h3>
+              <h3>{EMOJI.warning} No Product Setup</h3>
               <p>Please configure the product in "Admin Setup" first.</p>
               <button onClick={() => setCurrentView('admin-setup')}>Go to Admin Setup</button>
             </div>
@@ -650,7 +668,7 @@ function ExtensionSim() {
                 
                 <div className="tool-section">
                   <button className="btn-danger" onClick={deleteSelectedElement}>
-                    🗑️ Delete Selected
+                    {EMOJI.trash} Delete Selected
                   </button>
                   <button className="btn-danger" onClick={clearAllElements}>
                     Clear All
@@ -659,7 +677,7 @@ function ExtensionSim() {
                 
                 <div className="tool-section">
                   <button className="btn-success btn-large" onClick={saveDesignToCart}>
-                    💾 Save & Add to Cart
+                    {EMOJI.save} Save & Add to Cart
                   </button>
                 </div>
               </div>
@@ -689,7 +707,7 @@ function ExtensionSim() {
                   </div>
                 </div>
                 <p className="canvas-help">
-                  💡 Click to select • Drag to move • Use corner handles to resize/rotate • Delete key or button to remove
+                  {EMOJI.tip} Click to select • Drag to move • Use corner handles to resize/rotate • Delete key or button to remove
                 </p>
               </div>
             </div>
@@ -716,12 +734,12 @@ function ExtensionSim() {
                     <div>
                       <h3>Order #{order.id}</h3>
                       <p className="order-meta">
-                        <span>📅 {order.date}</span>
-                        <span>👤 {order.customerName}</span>
+                        <span>{EMOJI.calendar} {order.date}</span>
+                        <span>{EMOJI.customer} {order.customerName}</span>
                       </p>
                     </div>
                     <button className="btn-download" onClick={() => downloadOrderFiles(order)}>
-                      ⬇️ Download Files
+                      {EMOJI.download} Download Files
                     </button>
                   </div>
                   
@@ -741,12 +759,12 @@ function ExtensionSim() {
                       
                       <h4>Available Files:</h4>
                       <ul className="file-list">
-                        <li>📄 design.svg - Design vector file</li>
+                        <li>{EMOJI.file} design.svg - Design vector file</li>
                         {order.uploadedImages && order.uploadedImages.map((img, idx) => {
                           const mimeMatch = img.data.match(/data:image\/(\w+);/);
                           const extension = mimeMatch ? mimeMatch[1] : 'png';
                           return (
-                            <li key={idx}>🖼️ uploaded-image-{idx + 1}.{extension} - Customer uploaded image</li>
+                            <li key={idx}>{EMOJI.imageFile} uploaded-image-{idx + 1}.{extension} - Customer uploaded image</li>
                           );
                         })}
                       </ul>

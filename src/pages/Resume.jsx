@@ -11,6 +11,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 function Resume() {
   const { t, language } = useLanguage();
   const [numPages, setNumPages] = useState(null);
+  const DOWNLOAD_EMOJI = '\u{1F4E5}';
   
   // Map language codes to resume file names
   const resumeFiles = {
@@ -59,7 +60,7 @@ function Resume() {
           </Document>
         </div>
         <button onClick={handleDownload} className="download-button">
-          📥 {t.resume.download}
+          {DOWNLOAD_EMOJI} {t.resume.download}
         </button>
       </div>
     </div>

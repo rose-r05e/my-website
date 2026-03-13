@@ -5,6 +5,9 @@
   align-items: start;
 }
 
+.contact-info-section {
+  padding-top: 1rem;
+}
 
 .contact-info {
   display: flex;

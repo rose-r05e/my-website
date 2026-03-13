@@ -1,14 +1,20 @@
-.about-me-content {
+.about-me-page .about-me-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-me-page .about-me-content {
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-secondary);
 }
 
-.about-me-content p {
+.about-me-page .about-me-content p {
   margin-bottom: 1.5rem;
 }
 
-.placeholder-text {
+.about-me-page .placeholder-text {
   color: var(--text-tertiary);
   font-style: italic;
   text-align: center;
@@ -19,7 +25,7 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .about-me-content {
+  .about-me-page .about-me-content {
     font-size: 1rem;
   }
 }

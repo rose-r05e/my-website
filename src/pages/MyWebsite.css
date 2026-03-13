@@ -1,0 +1,88 @@
+.my-website-page .my-website-container {
+	width: 100%;
+}
+
+.my-website-page .project-subtitle {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.my-website-page .card-head-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+.my-website-page .card-head-row .section-header {
+	margin-bottom: 0;
+}
+
+.my-website-page .section p {
+	line-height: 1.7;
+	color: var(--text-primary);
+}
+
+.my-website-page .section p + p {
+	margin-top: 1rem;
+}
+
+.my-website-page .architecture-grid,
+.my-website-page .features-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.25rem;
+}
+
+.my-website-page .feature-card p,
+.my-website-page .architecture-grid .card p {
+	color: var(--text-secondary);
+}
+
+.my-website-page .stack-logos {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.my-website-page .stack-logo-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.45rem;
+	min-width: 110px;
+	padding: 0.75rem 0.85rem;
+	border: 1px solid var(--border-color);
+	border-radius: 0.75rem;
+	background: var(--bg-secondary);
+	color: var(--text-primary);
+	font-size: 0.9rem;
+}
+
+.my-website-page .stack-logo {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+	.my-website-page .architecture-grid,
+	.my-website-page .features-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 768px) {
+	.my-website-page .architecture-grid,
+	.my-website-page .features-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.my-website-page .card-head-row {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+}

@@ -3,10 +3,20 @@ import { LanguageContext } from './languageContextValue';
 
 // Language Provider Component
 export function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState(() => {
+  const supportedLanguages = ['en', 'fr', 'pl'];
+
+  const normalizeLanguage = (lang) => (
+    supportedLanguages.includes(lang) ? lang : 'en'
+  );
+
+  const [language, setLanguageState] = useState(() => {
     const savedLang = localStorage.getItem('language');
-    return savedLang || 'en';
+    return normalizeLanguage(savedLang);
   });
+
+  const setLanguage = (lang) => {
+    setLanguageState(normalizeLanguage(lang));
+  };
 
   // Save language preference to localStorage
   useEffect(() => {
@@ -40,7 +50,11 @@ export function LanguageProvider({ children }) {
       },
       aboutMe: {
         title: 'About Me',
-        placeholder: 'Add your personal information here...'
+        paragraphs: [
+          "Hi there! I'm Rosalie, you can call me. A full-stack developer with a passion for creating meaningful digital experiences. I thrive at the intersection of technology and human needs, building solutions that are not only functional but also intuitive and inspiring.",
+          "When I'm not coding, you'll find me immersed in the world of art. Whether it's creating something new or simply appreciating the beauty around me. I believe creativity fuels innovation, and I bring that mindset to every project I work on.",
+          "My mission? To bridge the gap between technology and the human experience, crafting tools and platforms that truly resonate with people. If you're looking for a developer who combines technical expertise with a creative touch, let's connect and bring your ideas to life!"
+        ]
       },
       contact: {
         title: 'Get In Touch',
@@ -85,7 +99,11 @@ export function LanguageProvider({ children }) {
       },
       aboutMe: {
         title: 'À Propos de Moi',
-        placeholder: 'Ajoutez vos informations personnelles ici...'
+        paragraphs: [
+          "Bonjour! Je m'appelle Rosalie, et je suis en train d'apprendre le français - alors soyez indulgents avec mes petites erreurs, s'il vous plaît! Je suis développeuse full-stack, passionnée par la création d'expériences numériques qui ont du sens.",
+          "Ce qui m'anime? Relier la technologie aux besoins humains, en concevant des solutions à la fois fonctionnelles, intuitives et inspirantes. Quand je ne code pas, vous me trouverez probablement en train de créer ou d'admirer de l'art - une autre façon pour moi d'exprimer ma créativité.",
+          "Mon objectif est simple : construire des outils qui parlent aux gens, en alliant expertise technique et sensibilité artistique. Si vous cherchez une développeuse qui met l'humain au cœur de ses projets, parlons-en!"
+        ]
       },
       contact: {
         title: 'Entrez en Contact',
@@ -130,7 +148,11 @@ export function LanguageProvider({ children }) {
       },
       aboutMe: {
         title: 'O Mnie',
-        placeholder: 'Dodaj tutaj swoje informacje osobiste...'
+        paragraphs: [
+          'Cześć! Mam na imię Rozalia. Full-stack developerka z pasją do tworzenia znaczącego cyfrowego doświadczenia. Najbardziej inspiruje mnie łączenie technologii z ludzkimi potrzebami, tworząc rozwiązania, które są nie tylko funkcjonalne, ale także intuicyjne i inspirujące.',
+          'Kiedy nie programuję, z pewnością znajdziecie mnie w świecie sztuki - czy to tworząc coś nowego, czy po prostu podziwiając piękno wokół. Uważam, że kreatywność napędza innowacje, i to podejście przenoszę na każdy projekt, nad którym pracuję.',
+          'Moja misja? Budować narzędzia, które naprawdę rezonują z ludźmi, łącząc wiedzę techniczną z wrażliwością artystyczną. Jeśli szukasz developera, który łączy umiejętności techniczne z kreatywnym podejściem, porozmawiajmy i ożywmy Twoje pomysły!'
+        ]
       },
       contact: {
         title: 'Skontaktuj się',
@@ -157,7 +179,7 @@ export function LanguageProvider({ children }) {
   const value = {
     language,
     setLanguage,
-    t: translations[language],
+    t: translations[language] || translations.en,
     translations
   };
 

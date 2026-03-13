@@ -1,5 +1,11 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import anprSystemImage from "../assets/pictures/Projects/anprsystem.webp";
+import simplegameImage from "../assets/pictures/Projects/simplegame.webp";
+import stardustImage from "../assets/pictures/Projects/placeholder.png";
+import woocommerceExtensionImage from "../assets/pictures/Projects/placeholder.png";
+import myWebsiteImage from "../assets/pictures/Projects/placeholder.png";
+
 import "./Projects.css";
 
 const PROJECTS = [
@@ -7,29 +13,36 @@ const PROJECTS = [
     id: "simplegame",
     title: "Having fun with JavaScript",
     description: "JavaScript framework made for handling Cartesian geometry in 2d and a demo game using it.",
-    type: "uncommercial",
-    image: null,
+    type: "noncommercial",
+    image: simplegameImage,
   },
   {
     id: "stardust",
     title: "Stardust GroundStation",
     description: "Ground control and telemetry software for the Stardust stratospheric experiment, developed for the BEXUS programme.",
-    type: "uncommercial",
-    image: null,
+    type: "noncommercial",
+    image: stardustImage,
   },
   {
     id: "woocommerce-extension",
     title: "Personalized Product Designer",
     description: "WooCommerce extension that allows customers to design custom products with text and images using Fabric.js canvas.",
     type: "commercial",
-    image: null,
+    image: woocommerceExtensionImage,
   },
   {
     id: "anpr-system",
     title: "ANPR System",
-    description: "Automatic Number Plate Recognition system for vehicle license plate detection and OCR reading with performance analysis.",
-    type: "uncommercial",
-    image: null,
+    description: "Automatic Number Plate Recognition system for vehicle license plate detection and OCR reading.",
+    type: "noncommercial",
+    image: anprSystemImage,
+  },
+  {
+    id: "my-website",
+    title: "The website you're on",
+    description: "Portfolio website built with React + Vite, featuring project pages, resume viewer, and multilingual support.",
+    type: "noncommercial",
+    image: myWebsiteImage,
   },
 ];
 
@@ -78,7 +91,7 @@ export default function Projects() {
           >
             <option value="all">All</option>
             <option value="commercial">Commercial</option>
-            <option value="noncommercial">Uncommercial</option>
+            <option value="noncommercial">Noncommercial</option>
           </select>
         </label>
       </div>

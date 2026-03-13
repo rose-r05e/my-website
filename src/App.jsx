@@ -12,6 +12,7 @@ import SimpleGame from './pages/SimpleGame';
 import Stardust from './pages/Stardust';
 import WoocommerceExtension from './pages/WoocommerceExtension';
 import ANPRSystem from './pages/ANPRSystem';
+import MyWebsite from './pages/MyWebsite';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/projects/stardust" element={<Stardust />} />
           <Route path="/projects/woocommerce-extension" element={<WoocommerceExtension />} />
           <Route path="/projects/anpr-system" element={<ANPRSystem />} />
+          <Route path="/projects/my-website" element={<MyWebsite />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/contact" element={<Contact />} />

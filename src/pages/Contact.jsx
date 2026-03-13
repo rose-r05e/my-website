@@ -1,10 +1,11 @@
 import { useLanguage } from '../hooks/useLanguage';
 import ContactForm from '../components/ContactForm';
-import ContactInfo from '../utils/contactInfo';
+import { getEmail, getGithub, getLinkedin } from '../utils/contactInfoLoader';
 import './Contact.css';
 
 function Contact() {
   const { t } = useLanguage();
+  const EMAIL_EMOJI = '\u{1F4E7}';
 
   return (
     <div className="page contact-page">
@@ -23,10 +24,10 @@ function Contact() {
             
             <div className="contact-info">
               <div className="contact-item">
-                <div className="icon">📧</div>
+                <div className="icon">{EMAIL_EMOJI}</div>
                 <div className="contact-details">
                   <h3>{t.contact.emailTitle}</h3>
-                  <a href={`mailto:${ContactInfo.getEmail()}`}>{ContactInfo.getEmail()}</a>
+                  <a href={`mailto:${getEmail()}`}>{getEmail()}</a>
                 </div>
               </div>
 
@@ -38,7 +39,7 @@ function Contact() {
                 </div>
                 <div className="contact-details">
                   <h3>{t.contact.githubTitle}</h3>
-                  <a href={ContactInfo.getGithub()} target="_blank" rel="noopener noreferrer">{ContactInfo.getGithub().replace('https://', '')}</a>
+                  <a href={getGithub()} target="_blank" rel="noopener noreferrer">{getGithub().replace('https://', '')}</a>
                 </div>
               </div>
 
@@ -50,7 +51,7 @@ function Contact() {
                 </div>
                 <div className="contact-details">
                   <h3>{t.contact.linkedinTitle}</h3>
-                  <a href={ContactInfo.getLinkedin()} target="_blank" rel="noopener noreferrer">{ContactInfo.getLinkedin().replace('https://', '')}</a>
+                  <a href={getLinkedin()} target="_blank" rel="noopener noreferrer">{getLinkedin().replace('https://', '')}</a>
                 </div>
               </div>
             </div>

@@ -102,7 +102,8 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+button,
+.button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.875rem 1.75rem;
@@ -110,15 +111,21 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: var(--button-bg);
-    color: var(--text-primary);
+  color: var(--text-primary);
   cursor: pointer;
+  display: inline-flex;
+    align-items: center;
+    justify-content: center;
   transition: border-color 0.25s;
 }
-button:hover {
+button:hover,
+.button:hover {
   border-color: var(--button-hover-color);
 }
 button:focus,
-button:focus-visible {
+button:focus-visible,
+.button:focus,
+.button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
@@ -233,8 +240,16 @@ a.card:not(.no-hover):hover,
 }
 
 @media (max-width: 768px) {
+  #root {
+      padding: 1rem;
+      padding-bottom: 0;
+    }
   .page {
-    padding: 2rem 1rem;
+    padding: 1rem 0.5rem;
+    }
+    
+    .section {
+      padding: 1rem;
   }
 
   .page-header h1 {
@@ -246,7 +261,7 @@ a.card:not(.no-hover):hover,
   }
 
   .card {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .section-header {
