@@ -1,9 +1,10 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import anprSystemImage from "../assets/pictures/Projects/anprsystem.webp";
-import simplegameImage from "../assets/pictures/Projects/simplegame.webp";
-import stardustImage from "../assets/pictures/Projects/placeholder.png";
-import woocommerceExtensionImage from "../assets/pictures/Projects/placeholder.png";
+import simplegameDarkImage from "../assets/pictures/Projects/game-dark.webp";
+import simplegameLightImage from "../assets/pictures/Projects/game-light.webp";
+import stardustImage from "../assets/pictures/Projects/stardust.webp";
+import woocommerceExtensionImage from "../assets/pictures/Projects/woocommerce-extension.webp";
 import myWebsiteImage from "../assets/pictures/Projects/placeholder.png";
 
 import "./Projects.css";
@@ -14,7 +15,7 @@ const PROJECTS = [
     title: "Having fun with JavaScript",
     description: "JavaScript framework made for handling Cartesian geometry in 2d and a demo game using it.",
     type: "noncommercial",
-    image: simplegameImage,
+    image: simplegameDarkImage,
   },
   {
     id: "stardust",
@@ -104,7 +105,20 @@ export default function Projects() {
             className="section project-section"
           >
             <div className="project-thumbnail">
-              {project.image ? (
+              {project.id === "simplegame" ? (
+                <>
+                  <img
+                    className="simplegame-image simplegame-image-light"
+                    src={simplegameLightImage}
+                    alt={`${project.title} preview`}
+                  />
+                  <img
+                    className="simplegame-image simplegame-image-dark"
+                    src={simplegameDarkImage}
+                    alt={`${project.title} preview`}
+                  />
+                </>
+              ) : project.image ? (
                 <img src={project.image} alt={`${project.title} preview`} />
               ) : (
                 <div className="project-thumbnail-inner" aria-hidden="true">IMG</div>

@@ -69,6 +69,17 @@
   display: block;
 }
 
+.projects-page .project-thumbnail .simplegame-image-dark {
+  display: none;
+}
+
+.dark-theme .projects-page .project-thumbnail .simplegame-image-light {
+  display: none;
+}
+
+.dark-theme .projects-page .project-thumbnail .simplegame-image-dark {
+  display: block;
+}
 .projects-page .project-thumbnail-inner {
   display: grid;
   place-items: center;
